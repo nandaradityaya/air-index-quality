@@ -2053,12 +2053,17 @@ a {
   ) !important;
 }
 
-.bg-gradient-burning {
+.bg-gradient-danger {
   background: linear-gradient(
     to right,
     rgb(255, 65, 108),
     rgb(255, 75, 43)
   ) !important;
+}
+
+.widget-danger {
+  background-color: rgb(255, 75, 43);
+  box-shadow: none;
 }
 
 .bg-gradient-lush {
@@ -2069,7 +2074,7 @@ a {
   ) !important;
 }
 
-.bg-gradient-Ohhappiness {
+.bg-gradient-success {
   background: linear-gradient(
     to right,
     rgb(0, 176, 155),
@@ -2077,12 +2082,22 @@ a {
   ) !important;
 }
 
-.bg-gradient-kyoto {
+.widget-success {
+  background-color: rgb(150, 201, 61);
+  box-shadow: none;
+}
+
+.bg-gradient-warning {
   background: linear-gradient(
     to right,
     rgb(247, 151, 30),
     rgb(255, 210, 0)
   ) !important;
+}
+
+.widget-warning {
+  background-color: rgb(255, 210, 0);
+  box-shadow: none;
 }
 
 .bg-gradient-blues {
