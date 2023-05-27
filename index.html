@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--favicon-->
+    <link rel="icon" href="assets/images/malaysia.png" type="image/png" />
+    <!--plugins-->
+    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link
+      href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/metismenu/css/metisMenu.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/highcharts/css/highcharts.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
+      rel="stylesheet"
+    />
+    <!-- loader-->
+    <link href="assets/css/pace.min.css" rel="stylesheet" />
+    <script src="assets/js/pace.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/css/app.css" rel="stylesheet" />
+    <link href="assets/css/icons.css" rel="stylesheet" />
+    <!-- Theme Style CSS -->
+    <link rel="stylesheet" href="assets/css/header-colors.css" />
+    <title>IQ Air</title>
+  </head>
+
+  <body>
+    <!--wrapper-->
+    <div class="wrapper">
+      <!--sidebar wrapper -->
+      <div class="sidebar-wrapper" data-simplebar="true">
+        <div class="sidebar-header">
+          <div>
+            <img
+              src="assets/images/malaysia.png"
+              class="logo-icon"
+              alt="logo icon"
+            />
+          </div>
+          <div>
+            <h4 class="logo-text">IQ Air</h4>
+          </div>
+          <div class="toggle-icon ms-auto">
+            <i class="bx bx-first-page"></i>
+          </div>
+        </div>
+        <!--navigation-->
+        <ul class="metismenu" id="menu">
+          <li class="menu-label">Menu</li>
+          <li>
+            <a href="index.html" class="">
+              <div class="parent-icon"><i class="bx bx-home"></i></div>
+              <div class="menu-title">Home</div>
+            </a>
+          </li>
+          <li>
+            <a href="#dailyHistorical" class="">
+              <div class="parent-icon"><i class="bx bx-pie-chart"></i></div>
+              <div class="menu-title">Daily Report</div>
+            </a>
+          </li>
+          <li>
+            <a href="#cityRanking" class="">
+              <div class="parent-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-bar-chart"
+                >
+                  <line x1="12" y1="20" x2="12" y2="10"></line>
+                  <line x1="18" y1="20" x2="18" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="16"></line>
+                </svg>
+              </div>
+              <div class="menu-title">City Ranking</div>
+            </a>
+          </li>
+          <li>
+            <a href="#analysisMalay" class="">
+              <div class="parent-icon">
+                <i class="fadeIn animated bx bx-analyse"></i>
+              </div>
+              <div class="menu-title">Analysis</div>
+            </a>
+          </li>
+        </ul>
+        <!--end navigation-->
+      </div>
+      <!--end sidebar wrapper -->
+      <!--start header -->
+      <header>
+        <div class="topbar d-flex align-items-center">
+          <nav class="navbar navbar-expand">
+            <div class="mobile-toggle-menu"><i class="bx bx-menu"></i></div>
+
+            <div class="top-menu ms-auto">
+              <ul class="navbar-nav align-items-center" style="display: none">
+                <li class="nav-item dropdown dropdown-large">
+                  <a
+                    class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <!-- <span class="alert-count">7</span> -->
+                    <!-- <i class="bx bx-bell"></i> -->
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:;">
+                      <div class="msg-header">
+                        <p class="msg-header-title">Notifications</p>
+                        <p class="msg-header-clear ms-auto">
+                          Marks all as read
+                        </p>
+                      </div>
+                    </a>
+                    <div class="header-notifications-list"></div>
+                    <a href="javascript:;">
+                      <div class="text-center msg-footer">
+                        View All Notifications
+                      </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropdown-large">
+                  <a
+                    class="nav-link dropdown-toggle dropdown-toggle-nocaret position-relative"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <!-- <span class="alert-count">8</span> -->
+                    <!-- <i class="bx bx-comment"></i> -->
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <a href="javascript:;">
+                      <div class="msg-header">
+                        <p class="msg-header-title">Messages</p>
+                        <p class="msg-header-clear ms-auto">
+                          Marks all as read
+                        </p>
+                      </div>
+                    </a>
+                    <div class="header-message-list"></div>
+                    <a href="javascript:;">
+                      <div class="text-center msg-footer">
+                        View All Messages
+                      </div>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="user-box dropdown" style="display: none">
+              <a
+                class="d-flex align-items-center nav-link dropdown-toggle dropdown-toggle-nocaret"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="assets/images/avatars/analog.jpeg"
+                  class="user-img"
+                  alt="user avatar"
+                />
+                <div class="user-info ps-3">
+                  <p class="user-name mb-0">Nanda Raditya</p>
+                  <p class="designattion mb-0">UI/UX Designer</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="javascript:;"
+                    ><i class="bx bx-user"></i><span>Profile</span></a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"
+                    ><i class="bx bx-cog"></i><span>Settings</span></a
+                  >
+                </li>
+                <li>
+                  <div class="dropdown-divider mb-0"></div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="javascript:;"
+                    ><i class="bx bx-log-out-circle"></i><span>Logout</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!--end header -->
+      <!--start page wrapper -->
+      <div class="page-wrapper">
+        <div class="page-content">
+          <div class="card radius-10 overflow-hidden bg-gradient-Ohhappiness">
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <div
+                  class="card radius-10 mb-0 me-3"
+                  style="background-color: rgb(150, 201, 61); box-shadow: none"
+                >
+                  <div class="card-body">
+                    <p class="text-white mb-3">AQI US</p>
+                    <h5 class="mb-0 text-white">41</h5>
+                  </div>
+                </div>
+                <div class="">
+                  <p class="text-white mb-3">Live AQI Indeks</p>
+                  <h3 class="mb-0 text-white">Good</h3>
+                </div>
+                <div class="ms-auto text-white">
+                  <i class="bx bx-happy-alt font-50"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+
+          <div class="row">
+            <div class="col-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h6 class="mb-1">Overview</h6>
+                    <h5>What is the current air quality in Malaysia?</h5>
+                  </div>
+                  <table class="table mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">Air Pollution Level</th>
+                        <th scope="col">Air Quality Index</th>
+                        <th scope="col">Main Pollutant</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div
+                            class="badge rounded-pill text-success bg-light-success p-2 text-uppercase px-3"
+                          >
+                            Good
+                          </div>
+                        </td>
+                        <td>
+                          41 <span class="ms-2 text-secondary">US AQI</span>
+                        </td>
+                        <td>PM2.5</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+
+          <div class="row" id="dailyHistorical">
+            <div class="col-12 col-lg-12">
+              <div class="card radius-10">
+                <div class="card-body">
+                  <div id="dailyChart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+
+          <div class="row" id="cityRanking">
+            <div class="col-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <h6 class="mb-1">Live AQI City Ranking</h6>
+                    <h5>Real-time Malaysia City Ranking</h5>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table mb-0" id="tableRanking">
+                      <thead class="table-light">
+                        <tr>
+                          <th>#</th>
+                          <th>City</th>
+                          <th>Poluttion Level</th>
+                          <th>Weather</th>
+                          <th>Temperature</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Nilai, Negeri Sembilan</td>
+                          <td>
+                            <div class="card radius-5 mb-0 bg-danger">
+                              <div class="card-body">
+                                <div class="d-flex">
+                                  <p class="text-white mb-0">
+                                    Unhealthy for Sensitive Groups
+                                  </p>
+                                  <p class="text-white mb-0 ms-auto me-3">
+                                    123 US AQI
+                                  </p>
+                                  <i class="lni lni-emoji-sad text-white"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <i class="lni lni-rain" style="color: blue"></i> 70%
+                          </td>
+                          <td>32°</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Shah Alam, Selangor</td>
+                          <td>
+                            <div class="card radius-5 mb-0 bg-warning">
+                              <div class="card-body">
+                                <div class="d-flex">
+                                  <p class="text-white mb-0">Moderate</p>
+                                  <p class="text-white mb-0 ms-auto me-3">
+                                    97 US AQI
+                                  </p>
+                                  <i
+                                    class="lni lni-emoji-speechless text-white"
+                                  ></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td><i class="lni lni-rain text-blue"></i> 40%</td>
+                          <td>32°</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Johor Bahru, Johor</td>
+                          <td>
+                            <div class="card radius-5 mb-0 bg-success">
+                              <div class="card-body">
+                                <div class="d-flex">
+                                  <p class="text-white mb-0">Good</p>
+                                  <p class="text-white mb-0 ms-auto me-3">
+                                    44 US AQI
+                                  </p>
+                                  <i class="lni lni-emoji-happy text-white"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td><i class="lni lni-cloud text-secondary"></i></td>
+                          <td>32°</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Balik Pulau, Penang</td>
+                          <td>
+                            <div class="card radius-5 mb-0 bg-success">
+                              <div class="card-body">
+                                <div class="d-flex">
+                                  <p class="text-white mb-0">Good</p>
+                                  <p class="text-white mb-0 ms-auto me-3">
+                                    22 US AQI
+                                  </p>
+                                  <i class="lni lni-emoji-happy text-white"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td><i class="lni lni-cloud text-secondary"></i></td>
+                          <td>32°</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+
+          <div class="row">
+            <div class="col-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="text-center mb-3">
+                    <h5 class="mb-1">
+                      How to best protect from air pollution?
+                    </h5>
+                    <p>Reduce your air pollution exposure in Malaysia</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-lg-4 text-center face-mask">
+                      <img
+                        src="assets/images/facemask.jpeg"
+                        alt="mask"
+                        style="width: 224px; height: 300px"
+                      />
+                      <h6 class="text-center">Face Mask</h6>
+                    </div>
+                    <div class="col-12 col-lg-4 text-center purifier">
+                      <img
+                        src="assets/images/air purifier.jpeg"
+                        alt="purifier"
+                        style="width: 224px; height: 300px"
+                      />
+                      <h6 class="text-center">Air Purifier</h6>
+                    </div>
+                    <div class="col-12 col-lg-4 text-center ir-quality-monitor">
+                      <img
+                        src="assets/images/air quality monitor.jpeg"
+                        alt="purifier"
+                        style="width: 224px; height: 300px"
+                      />
+                      <h6 class="text-center">Air Quality Monitor</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+
+          <div class="row" id="analysisMalay">
+            <div class="col-12 col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <p class="text-blue">
+                      AIR QUALITY ANALYSIS AND STATISTICS FOR MALAYSIA
+                    </p>
+                    <h5 class="mb-1">
+                      How bad is the quality of air in Malaysia?
+                    </h5>
+                  </div>
+                  <div style="text-align: justify">
+                    The country of Malaysia is found in southeast Asia, made up
+                    of thirteen states and three federal territories. These are
+                    separated by the south china sea into two separate sections,
+                    with peninsular Malaysia being the region that it typically
+                    associated with the countries name, hosting the capital city
+                    of Kuala Lumpur. The other region is located in Borneo,
+                    being known as the eastern portion of Malaysia respectively.
+                    There are some noticeable discrepancies in the levels of
+                    pollution between the two regions. In 2019 Malaysia came in
+                    ranked 50th place amongst all the countries of the world,
+                    with a PM2.5 rating of 19.36 µg/m³, putting its yearly
+                    average into the ‘moderately’ polluted range. <br />
+                    <br />
+
+                    In order for a city or country to be classified as
+                    moderately polluted requires a PM2.5 reading anywhere
+                    between 12.1 to 35.4 µg/m³, putting Malaysia somewhat at the
+                    lower end of this moderate spectrum, however as it can be
+                    observed, there are months throughout the year that
+                    experience rapid spikes in pollution, and as such it is of
+                    importance to take this into account, both in regards to the
+                    yearly average rating as well as the causes and appropriate
+                    measures that may be taken against it. In terms of how
+                    polluted it is in comparison to other countries in south
+                    east Asia, it can be seen that Malaysia actually came in
+                    with a significantly better placing than many of its ASEAN
+                    (Association of South East Asian Nations) neighbors, coming
+                    in with a better position ahead of countries such as
+                    Thailand, which presented with a ranking of 28th place in
+                    2019, Vietnam (15th place) and Indonesia (6th place). This
+                    goes to show that whilst Malaysia has a plethora of
+                    pollution and haze related issues that it has to deal with
+                    year in year out, its neighbors give some perspective of the
+                    improvements that it has made over the last few decades of
+                    industrial growth, and despite facing many obstacles in its
+                    path towards cleaner air, pollution levels could eventually
+                    be reduced quite significantly. <br /><br />
+
+                    Some of these aforementioned obstacles include an over
+                    reliance on vehicles, a lack of highly efficient public
+                    transport systems as compared to other countries (although
+                    this is changing rapidly with large amounts of investment
+                    going into public transport initiatives and projects) as
+                    well as comparatively lax rules regarding types of fuels
+                    used as well as heavy fuel subsidies, causing a number of
+                    pollutants such as nitrogen dioxide (NO2) and sulfur dioxide
+                    (SO2) to enter into the atmosphere, causing worse US AQI
+                    readings as well as an increased level of PM2.5 found in the
+                    air, coming heavily from the automobile sector. <br /><br />
+
+                    PM2.5 refers to fine particulate matter of 2.5 micrometers
+                    or less, with highly detrimental effects displayed in those
+                    who breathe it over long periods of time. With its 50th
+                    place ranking worldwide out of 98 countries ranked, it
+                    stands as a country that suffers from periods of extremely
+                    poor air quality where these PM2.5 levels will climb quickly
+                    to dangerous levels, however throughout the rest of the year
+                    when Malaysia is absent from these pollution spikes (which
+                    when considered, are sometimes out of its control due to
+                    transborder smoke issues) the air quality sits at the lower
+                    end of the moderate rating, with some cities finding
+                    themselves in the ‘good’ rated bracket throughout the
+                    majority of the year, and others finding themselves sitting
+                    within the World Health Organization’s target reading of 0
+                    to 10 µg/m³ during a majority of the months of the year, as
+                    recorded in 2019. <br /><br />
+
+                    When observing some of the cities displayed on the IQAir
+                    website, such as the top seven most polluted cities in
+                    Malaysia as of 2019, it is evident that the levels of
+                    pollution in these cities could be somewhat of a concern,
+                    and be bringing down the countries yearly average ranking.
+                    These top seven cities, which include ones such as Kuala
+                    Lumpur, Putrajaya, Shah Alam and Petaling Jaya to name a
+                    few, sat at moderate ratings all year round, with rapid
+                    climbs observed in August, followed by a dangerous spike in
+                    pollution in the month of September, sometimes spilling over
+                    into October but gradually receding afterwards. For cities
+                    such as these, especially during the latter part of the
+                    year, it is apparent that they suffer from a poorer quality
+                    of air, and would be of significant concern for those living
+                    there year-round, with preventative measures being of
+                    greater importance. <br /><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END ROW -->
+        </div>
+      </div>
+      <!--end page wrapper -->
+      <!--start overlay-->
+      <div class="overlay toggle-icon"></div>
+      <!--end overlay-->
+      <!--Start Back To Top Button-->
+      <a href="javaScript:;" class="back-to-top"
+        ><i class="bx bxs-up-arrow-alt"></i
+      ></a>
+      <!--End Back To Top Button-->
+      <footer class="page-footer">
+        <p class="mb-0">Copyright © 2023. All right reserved.</p>
+      </footer>
+    </div>
+    <!--end wrapper-->
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--plugins-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+    <!-- highcharts js -->
+    <script src="assets/plugins/highcharts/js/highcharts.js"></script>
+    <script src="assets/plugins/highcharts/js/highcharts-more.js"></script>
+    <script src="assets/plugins/highcharts/js/variable-pie.js"></script>
+    <script src="assets/plugins/highcharts/js/solid-gauge.js"></script>
+    <script src="assets/plugins/highcharts/js/highcharts-3d.js"></script>
+    <script src="assets/plugins/highcharts/js/cylinder.js"></script>
+    <script src="assets/plugins/highcharts/js/funnel3d.js"></script>
+    <script src="assets/plugins/highcharts/js/exporting.js"></script>
+    <script src="assets/plugins/highcharts/js/export-data.js"></script>
+    <script src="assets/plugins/highcharts/js/accessibility.js"></script>
+
+    <!-- !!! CHART DAILY HERE !!! -->
+    <script src="assets/js/chartDaily.js"></script>
+
+    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
+    <!--app JS-->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var table = $("#tableRanking").DataTable({
+          dom: '<"row top"<"col-lg-4 col-md-4 col-sm-12 mb-2"B><"col-lg-4 col-md-4 col-sm-12 mb-2"l><"col-lg-4 col-md-4 col-sm-12 mb-2"f>>rtip',
+          buttons: ["csv", "excel", "pdf", "print"],
+        });
+      });
+    </script>
+  </body>
+</html>
